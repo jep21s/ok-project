@@ -4,10 +4,18 @@ pluginManagement {
         kotlin("jvm") version kotlinVersion
     }
 }
+
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-rootProject.name = "ok-project"
-includeBuild("lessons")
-includeBuild("ok-messenger")
-include("backend-plugin")
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+
+rootProject.name = "ok-messenger"
+
