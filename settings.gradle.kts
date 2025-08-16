@@ -10,4 +10,3 @@ plugins {
 rootProject.name = "ok-project"
 includeBuild("lessons")
 includeBuild("ok-messenger")
-include("backend-plugin")

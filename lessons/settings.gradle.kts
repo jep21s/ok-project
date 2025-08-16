@@ -1,12 +1,13 @@
 pluginManagement {
-    val kotlinVersion: String by settings
+    includeBuild("../backend-plugin")
     plugins {
-        kotlin("jvm") version kotlinVersion
+        id("build-jvm") apply false
+        id("build-kmp") apply false
     }
-}
-
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
 }
 
 dependencyResolutionManagement {
