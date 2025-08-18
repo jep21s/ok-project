@@ -36,4 +36,4 @@
 4. DevOps
     1. [Файлы сборки](./deploy)
 5. Тестовые сценарии
-   1. [Tests list](docs/05-testing/tests-list)
+   1. [Tests list](docs/05-testing/tests-list.md)
